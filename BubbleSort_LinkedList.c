@@ -133,7 +133,8 @@ void BubbleSort(Node* Head)
 		tail = SLL_GetNodeAt(Head, len - (i+1));
 		Node* Current = Head;
 		int temp = 0; //데이터 값만 바꾸어 주어도 되므로 노드의 데이터의 형인 int 이용
-		while (Current != tail)
+		printf("rotation #%d===\n", i);
+;		while (Current != tail)
 		{
 			if (Current->Data > Current->Next->Data)
 			{
@@ -143,6 +144,16 @@ void BubbleSort(Node* Head)
 			}
 			Current = Current->Next;
 		}
+		
+		Node* c= Head;
+
+		while (c != NULL)
+		{
+			printf("%d\n", c->Data);
+			c = c->Next;
+			
+		}
+
 		i++;
 	}
 
